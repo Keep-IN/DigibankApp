@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">DigibankApp</string>
+    <string name="informasi_data_diri">Informasi Data Diri</string>
+    <string name="informasi">Masukkan informasi data diri untuk proses pembuatan akun.</string>
+    <string name="buat_akun">Buat Akun</string>
 </resources>
