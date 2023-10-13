@@ -111,10 +111,35 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="3dp"
                         android:fontFamily="@font/poppins_medium"
-                        android:text="NIK :"
+                        android:text="NIK"
                         android:textSize="14sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="*"
+                        android:textColor="@color/bintang"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/txtNik"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="3dp"
+                        android:text=":"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/textView7"
                         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -340,7 +365,7 @@
                         android:hint="Password"
                         android:layout_marginBottom="53dp"
                         app:passwordToggleEnabled="true"
-                        app:passwordToggleTint="@color/mata"
+                        app:passwordToggleTint="@color/btn"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
