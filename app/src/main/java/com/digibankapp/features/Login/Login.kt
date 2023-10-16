@@ -17,12 +17,26 @@ class Login : AppCompatActivity() {
         setContentView(binding.root)
         loginViewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
 
-        binding.tilEmail.editText?.doOnTextChanged { text, start, before, count ->
-            if (loginViewModel.validateEmail(text.toString())){
-                binding.tilEmail.isErrorEnabled = true
-                binding.tilEmail.error = "Email yang dimasukkan salah"
-            } else {
-                binding.tilEmail.isErrorEnabled = false
+        binding.apply {
+            tilEmail.editText?.doOnTextChanged { text, start, before, count ->
+                if (loginViewModel.validateEmail(text.toString())){
+                    binding.tilEmail.isErrorEnabled = false
+                    binding.btnLogin.isEnabled = true
+                } else {
+                    binding.tilEmail.isErrorEnabled = true
+                    binding.btnLogin.isEnabled = false
+                    binding.tilEmail.error = "Email yang dimasukkan harus sesuai format"
+                }
+            }
+            tilPassword.editText?.doOnTextChanged { text, start, before, count ->
+                if (loginViewModel.validatePassword(text.toString())){
+                    binding.tilPassword.isErrorEnabled = false
+                    binding.btnLogin.isEnabled = true
+                } else {
+                    binding.tilPassword.isErrorEnabled = true
+                    binding.btnLogin.isEnabled = false
+                    binding.tilPassword.error = "Password harus terdiri dari huruf dan angka"
+                }
             }
         }
     }
