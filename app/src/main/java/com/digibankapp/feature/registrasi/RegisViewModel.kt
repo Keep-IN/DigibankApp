@@ -7,8 +7,8 @@ import javax.xml.validation.Validator
 class RegisViewModel: ViewModel() {
     var isEmailValid = false
     var isPasswordValid = false
-    var isNikValid = false
-    var isNohpValid = false
+    var isNikValid = true
+    var isNohpValid = true
     fun validateEmail(email: String): Boolean{
         isEmailValid = email.contains("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}\$".toRegex())
         return isEmailValid
@@ -20,12 +20,12 @@ class RegisViewModel: ViewModel() {
     }
 
     fun validateNohp(noHp : String) : Boolean{
-        isNohpValid = noHp.length < 10
+        isNohpValid = noHp.length > 10
         return isNohpValid
     }
 
     fun validateNik(nik : String) : Boolean{
-        isNikValid = nik.length < 16
+        isNikValid = nik.length > 16
         return isNikValid
     }
 }

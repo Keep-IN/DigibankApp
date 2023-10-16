@@ -10,6 +10,7 @@ import com.digibankapp.databinding.ActivityRegistrasiBinding
 class Registrasi : AppCompatActivity() {
     private lateinit var viewmodel : RegisViewModel
     lateinit var binding: ActivityRegistrasiBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistrasiBinding.inflate(layoutInflater)
@@ -21,44 +22,46 @@ class Registrasi : AppCompatActivity() {
             etEmail.editText?.doOnTextChanged { text, start, before, count ->
                 if (viewmodel.validateEmail(text.toString())){
                     binding.etEmail.isErrorEnabled = false
-                    binding.btnRegist.isEnabled = true
                 } else {
                     binding.etEmail.isErrorEnabled = true
-                    binding.btnRegist.isEnabled = false
                     binding.etEmail.error = "Email yang dimasukkan harus sesuai format"
                 }
+                validateInput()
             }
             etPassword.editText?.doOnTextChanged { text, start, before, count ->
                 if (viewmodel.validatePassword(text.toString())){
                     binding.etPassword.isErrorEnabled = false
-                    binding.btnRegist.isEnabled = true
                 } else {
                     binding.etPassword.isErrorEnabled = true
-                    binding.btnRegist.isEnabled = false
                     binding.etPassword.error = "Password harus terdiri dari huruf dan angka"
                 }
+                validateInput()
             }
             etTelepon.editText?.doOnTextChanged { text, start, before, count ->
-                if (viewmodel.validateNohp(text.toString())){
-                    binding.etTelepon.isErrorEnabled = true
-                    binding.btnRegist.isEnabled = false
-                    binding.etTelepon.error = "Bilangan harus min. 10 karakter"
-                } else {
+                if (viewmodel.validateNohp(text.toString())) {
                     binding.etTelepon.isErrorEnabled = false
-                    binding.btnRegist.isEnabled = true
+                } else {
+                    binding.etTelepon.isErrorEnabled = true
+                    binding.etTelepon.error = "Bilangan harus min. 10 karakter"
+
                 }
+                validateInput()
             }
             etNIK.editText?.doOnTextChanged { text, start, before, count ->
-                if (viewmodel.validateNik(text.toString())){
-                    binding.etNIK.isErrorEnabled = true
-                    binding.btnRegist.isEnabled = false
-                    binding.etNIK.error = "Bilangan harus min. 16 karakter"
-                } else {
+                if (viewmodel.validateNik(text.toString())) {
                     binding.etNIK.isErrorEnabled = false
-                    binding.btnRegist.isEnabled = true
+                } else {
+                    binding.etNIK.isErrorEnabled = true
+                    binding.etNIK.error = "Bilangan harus min. 16 karakter"
                 }
+                validateInput()
             }
         }
-
+    }
+    private fun validateInput(){
+        binding.btnRegist.isEnabled = viewmodel.validateEmail(binding.etEmail.editText?.text.toString())
+                && viewmodel.validatePassword(binding.etPassword.editText?.text.toString())
+                && viewmodel.validateNik(binding.etNIK.editText?.text.toString())
+                && viewmodel.validateNohp(binding.etTelepon.editText?.text.toString())
     }
 }

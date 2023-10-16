@@ -147,13 +147,14 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="52720507020831"
+                        app:hintEnabled="false"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/txtNik">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
+                            android:hint="52720507020831"
                             android:background="@drawable/bg_text_field"
                             android:layout_height="wrap_content"
                             android:inputType="number" />
@@ -201,7 +202,7 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Nama Lengkap"
+                        app:hintEnabled="false"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/txtNama">
@@ -209,6 +210,7 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:hint="Nama Lengkap"
                             android:background="@drawable/bg_text_field"
                             android:inputType="textPersonName" />
 
@@ -255,7 +257,7 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="No. Telepon"
+                        app:hintEnabled="false"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/txtNoHp">
@@ -263,6 +265,7 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:hint="No. Telepon"
                             android:background="@drawable/bg_text_field"
                             android:inputType="number" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -309,7 +312,7 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Email"
+                        app:hintEnabled="false"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/txtEmail">
@@ -317,6 +320,7 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:hint="Email"
                             android:background="@drawable/bg_text_field"
                             android:inputType="textEmailAddress" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -362,7 +366,7 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Password"
+                        app:hintEnabled="false"
                         android:layout_marginBottom="53dp"
                         app:passwordToggleEnabled="true"
                         app:passwordToggleTint="@color/btn"
@@ -374,6 +378,7 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:hint="Password"
                             android:background="@drawable/bg_text_field"
                             android:inputType="textWebPassword" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -381,25 +386,24 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnRegist"
-                style="@style/Widget.Material3.Button.ElevatedButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/materialCardView2"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="18dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginBottom="44dp"
-                android:backgroundTint="@color/btn"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="60dp"
+                android:enabled="false"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Lanjut"
-                android:textColor="@color/white"
-                android:textSize="14sp"
+                app:cornerRadius="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+                app:layout_constraintVertical_bias="0.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
