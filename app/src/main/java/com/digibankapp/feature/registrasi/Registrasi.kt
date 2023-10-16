@@ -42,7 +42,7 @@ class Registrasi : AppCompatActivity() {
                     binding.etTelepon.isErrorEnabled = false
                 } else {
                     binding.etTelepon.isErrorEnabled = true
-                    binding.etTelepon.error = "Bilangan harus min. 10 karakter"
+                    binding.etTelepon.error = "No Telepon kurang dari 10 karakter"
 
                 }
                 validateInput()
@@ -52,7 +52,7 @@ class Registrasi : AppCompatActivity() {
                     binding.etNIK.isErrorEnabled = false
                 } else {
                     binding.etNIK.isErrorEnabled = true
-                    binding.etNIK.error = "Bilangan harus min. 16 karakter"
+                    binding.etNIK.error = "NIK kurang dari 16 karakter"
                 }
                 validateInput()
             }
