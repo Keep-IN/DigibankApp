@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">DigibankApp</string>
+    <string name="title_rekening">Rekening</string>
+    <string name="data_akun">Data Akun</string>
+    <string name="subtitle_dataakun">Masukkan informasi mengenai NIK dan Nomor Rekening yang sudah ada.</string>
+    <string name="title_nik">NIK</string>
+    <string name="txt_star">*</string>
+    <string name="txt_colon">:</string>
+    <string name="hint_nik">NIK</string>
+    <string name="title_norek">Nomor Rekening</string>
+    <string name="txt_starNorek">*</string>
+    <string name="txt_colon_norek">:</string>
+    <string name="hint_norek">Nomor Rekening</string>
 </resources>

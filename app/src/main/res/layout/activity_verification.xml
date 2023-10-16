@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.verification.VerificationActivity">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#6C63FF"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvRekening"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/arrow_back" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tvRekening"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/title_rekening"
+        android:textColor="#202327"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="335dp"
+        android:layout_height="601dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="27dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRekening">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvDataAkun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/data_akun"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSubtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/subtitle_dataakun"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tvDataAkun"
+                app:layout_constraintTop_toBottomOf="@+id/tvDataAkun" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="18dp"
+                android:background="#E2E8F0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
+
+            <TextView
+                android:id="@+id/textViewNIK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/title_nik"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                tools:ignore="MissingConstraints" />
+
+
+            <TextView
+                android:id="@+id/tvBintang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="23dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/txt_star"
+                android:textColor="#E13232"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/textViewNIK"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tvColonNIK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/txt_colon"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/tvBintang"
+                app:layout_constraintTop_toTopOf="@+id/tvBintang"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNIK"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="20dp"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textViewNIK"
+                app:layout_constraintTop_toBottomOf="@+id/textViewNIK">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tvNIK"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_text_field"
+                    android:hint="NIK"
+                    android:inputType="number"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvNorek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="160dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/title_norek"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tilNIK"
+                app:layout_constraintTop_toBottomOf="@+id/tilNIK"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tvNorekBintang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/txt_starNorek"
+                android:textColor="#E13232"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/tvNorek"
+                app:layout_constraintTop_toBottomOf="@+id/tilNIK"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tvNorekColon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="178dp"
+                android:text="@string/txt_colon_norek"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvNorekBintang"
+                app:layout_constraintTop_toTopOf="@+id/tvNorekBintang" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNorek"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="20dp"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvNorek"
+                app:layout_constraintTop_toBottomOf="@+id/tvNorek">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tvNomorInduk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_text_field"
+                    android:hint="Nomor Rekening"
+                    android:inputType="number"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLanjut"
+        android:layout_width="342dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="48dp"
+        android:text="Lanjut"
+        android:enabled="false"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.387"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
