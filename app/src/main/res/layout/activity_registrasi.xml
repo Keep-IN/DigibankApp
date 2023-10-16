@@ -143,7 +143,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInputLayout"
+                        android:id="@+id/etNIK"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -170,7 +170,7 @@
                         android:textSize="14sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+                        app:layout_constraintTop_toBottomOf="@+id/etNIK" />
 
                     <TextView
                         android:id="@+id/textView3"
@@ -182,7 +182,7 @@
                         android:text="*"
                         android:textColor="@color/bintang"
                         app:layout_constraintStart_toEndOf="@+id/txtNama"
-                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+                        app:layout_constraintTop_toBottomOf="@+id/etNIK" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -194,10 +194,10 @@
                         android:textSize="14sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/textView3"
-                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+                        app:layout_constraintTop_toBottomOf="@+id/etNIK" />
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInput2"
+                        android:id="@+id/etNama"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -224,7 +224,7 @@
                         android:textSize="14sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textInput2" />
+                        app:layout_constraintTop_toBottomOf="@+id/etNama" />
 
                     <TextView
                         android:id="@+id/textView2"
@@ -236,7 +236,7 @@
                         android:text="*"
                         android:textColor="@color/bintang"
                         app:layout_constraintStart_toEndOf="@+id/txtNoHp"
-                        app:layout_constraintTop_toBottomOf="@+id/textInput2" />
+                        app:layout_constraintTop_toBottomOf="@+id/etNama" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -248,10 +248,10 @@
                         android:textSize="14sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/textView2"
-                        app:layout_constraintTop_toBottomOf="@+id/textInput2" />
+                        app:layout_constraintTop_toBottomOf="@+id/etNama" />
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInput3"
+                        android:id="@+id/etTelepon"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -264,7 +264,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/bg_text_field"
-                            android:inputType="textPhonetic" />
+                            android:inputType="number" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <TextView
@@ -277,7 +277,7 @@
                         android:textSize="14sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textInput3" />
+                        app:layout_constraintTop_toBottomOf="@+id/etTelepon" />
 
                     <TextView
                         android:id="@+id/textView4"
@@ -289,7 +289,7 @@
                         android:text="*"
                         android:textColor="@color/bintang"
                         app:layout_constraintStart_toEndOf="@+id/txtEmail"
-                        app:layout_constraintTop_toBottomOf="@+id/textInput3" />
+                        app:layout_constraintTop_toBottomOf="@+id/etTelepon" />
 
                     <TextView
                         android:id="@+id/textView5"
@@ -302,10 +302,10 @@
                         android:textSize="14sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/textView4"
-                        app:layout_constraintTop_toBottomOf="@+id/textInput3" />
+                        app:layout_constraintTop_toBottomOf="@+id/etTelepon" />
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInput4"
+                        android:id="@+id/etEmail"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -331,7 +331,7 @@
                         android:textSize="14sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textInput4" />
+                        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
                     <TextView
                         android:id="@+id/textView6"
@@ -343,7 +343,7 @@
                         android:text="*"
                         android:textColor="@color/bintang"
                         app:layout_constraintStart_toEndOf="@+id/txtPassword"
-                        app:layout_constraintTop_toBottomOf="@+id/textInput4" />
+                        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -355,10 +355,10 @@
                         android:textSize="14sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/textView6"
-                        app:layout_constraintTop_toBottomOf="@+id/textInput4" />
+                        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInput5"
+                        android:id="@+id/etPassword"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
