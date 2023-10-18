@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.buatRekening.BuatRekening">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvJudulBuatRek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="135dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="135dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Visual Card"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDeskripBuatRek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Pilih kartu untuk melihat transaksi kartu Anda"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/tvJudulBuatRek"
+                app:layout_constraintStart_toStartOf="@+id/tvJudulBuatRek"
+                app:layout_constraintTop_toBottomOf="@+id/tvJudulBuatRek" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPilihKartu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="23dp"
+                android:layout_marginBottom="45dp"
+                android:enabled="false"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Pilih Kartu"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cvPlat" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvSilver"
+                android:layout_width="397dp"
+                android:layout_height="172dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginEnd="21dp"
+                app:cardBackground="@drawable/"
+                app:cardCornerRadius="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDeskripBuatRek"
+                android:clickable="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="264dp"
+                        android:background="@drawable/bg_silver"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/ivGpn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="19dp"
+                                android:layout_marginBottom="18dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:srcCompat="@drawable/gpn" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/tvSilver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="35dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Silver"
+                        android:textSize="24dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvNorekSilver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="xxxxxxxx"
+                        android:textSize="16dp"
+                        app:layout_constraintStart_toStartOf="@+id/tvSilver"
+                        app:layout_constraintTop_toBottomOf="@+id/tvSilver" />
+
+                    <TextView
+                        android:id="@+id/tvLimitSilver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="limit transfer : 5 juta "
+                        android:textSize="11dp"
+                        app:layout_constraintStart_toStartOf="@+id/tvNorekSilver"
+                        app:layout_constraintTop_toBottomOf="@+id/tvNorekSilver" />
+
+                    <TextView
+                        android:id="@+id/tvDebitSilver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="78dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Debit"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvGold"
+                android:layout_width="397dp"
+                android:layout_height="172dp"
+                android:layout_marginTop="27dp"
+                app:layout_constraintEnd_toEndOf="@+id/cvSilver"
+                app:layout_constraintStart_toStartOf="@+id/cvSilver"
+                app:layout_constraintTop_toBottomOf="@+id/cvSilver"
+                android:clickable="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="264dp"
+                        android:background="@drawable/bg_gold"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/ivVisa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="19dp"
+                                android:layout_marginBottom="18dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:srcCompat="@drawable/visa" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/tvGold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="35dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Gold"
+                        android:textSize="24dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvNorekGold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="xxxxxxxx"
+                        android:textSize="16dp"
+                        app:layout_constraintStart_toStartOf="@+id/tvGold"
+                        app:layout_constraintTop_toBottomOf="@+id/tvGold" />
+
+                    <TextView
+                        android:id="@+id/tvLimitGold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="limit transfer : 10 juta "
+                        android:textSize="11dp"
+                        app:layout_constraintStart_toStartOf="@+id/tvNorekGold"
+                        app:layout_constraintTop_toBottomOf="@+id/tvNorekGold" />
+
+                    <TextView
+                        android:id="@+id/tvDebitGold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="78dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Debit"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvPlat"
+                android:layout_width="397dp"
+                android:layout_height="172dp"
+                android:layout_marginTop="27dp"
+                app:layout_constraintEnd_toEndOf="@+id/cvGold"
+                app:layout_constraintStart_toStartOf="@+id/cvGold"
+                app:layout_constraintTop_toBottomOf="@+id/cvGold"
+                android:clickable="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="264dp"
+                        android:background="@drawable/bg_platinum"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/ivMc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="19dp"
+                                android:layout_marginBottom="18dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:srcCompat="@drawable/mastercard" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/tvPlat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="35dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Platinum"
+                        android:textSize="24dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvNorekPlat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="xxxxxxxx"
+                        android:textSize="16dp"
+                        app:layout_constraintStart_toStartOf="@+id/tvPlat"
+                        app:layout_constraintTop_toBottomOf="@+id/tvPlat" />
+
+                    <TextView
+                        android:id="@+id/tvLimitPlat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="limit transfer :  15 juta"
+                        android:textSize="11dp"
+                        app:layout_constraintStart_toStartOf="@+id/tvNorekPlat"
+                        app:layout_constraintTop_toBottomOf="@+id/tvNorekPlat" />
+
+                    <TextView
+                        android:id="@+id/tvDebitPlat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="78dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Debit"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
