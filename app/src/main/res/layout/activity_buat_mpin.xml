@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.buatMpin.BuatMpin">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView"
+                android:layout_width="335dp"
+                android:layout_height="601dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="27dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvJudulMpin">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#FFFFFF">
+
+                    <TextView
+                        android:id="@+id/tvInformasiMpin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Informasi MPIN "
+                        android:textSize="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvDescMpin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Masukkan informasi mengenai MPIN akun mobile mbanking."
+                        android:textColor="#727FA3"
+                        android:textSize="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/tvInformasiMpin"
+                        app:layout_constraintTop_toBottomOf="@+id/tvInformasiMpin" />
+
+                    <ImageView
+                        android:id="@+id/ivBatas"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvDescMpin"
+                        app:srcCompat="@drawable/img_separator" />
+
+                    <TextView
+                        android:id="@+id/tvMPIN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="18dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="MPIN"
+                        android:textSize="14dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ivBatas" />
+
+                    <TextView
+                        android:id="@+id/tvBintangMpin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="*"
+                        android:textColor="#E13232"
+                        android:textSize="14dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvMPIN"
+                        app:layout_constraintStart_toEndOf="@+id/tvMPIN"
+                        app:layout_constraintTop_toTopOf="@+id/tvMPIN" />
+
+                    <TextView
+                        android:id="@+id/tvMpinTd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text=":"
+                        android:textSize="14dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvBintangMpin"
+                        app:layout_constraintStart_toEndOf="@+id/tvBintangMpin"
+                        app:layout_constraintTop_toTopOf="@+id/tvBintangMpin" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilMpin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="20dp"
+                        android:backgroundTint="#D8D8D8"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvMPIN"
+                        app:passwordToggleDrawable="@drawable/ic_togle"
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleTint="#6C63FF">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#000000"
+                            android:hint="MPIN"
+                            android:password="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/tvErrorMpin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="MPIN harus terdiri dari 6 digit"
+                        android:textColor="#E71414"
+                        android:textSize="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tilMpin" />
+
+                    <TextView
+                        android:id="@+id/tvKonfirmMpin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Konfirmasi MPIN"
+                        android:textSize="14dp"
+                        app:layout_constraintStart_toStartOf="@+id/tvErrorMpin"
+                        app:layout_constraintTop_toBottomOf="@+id/tvErrorMpin" />
+
+                    <TextView
+                        android:id="@+id/tvKonfirmBintang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="*"
+                        android:textColor="#E13232"
+                        android:textSize="14dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvKonfirmMpin"
+                        app:layout_constraintStart_toEndOf="@+id/tvKonfirmMpin"
+                        app:layout_constraintTop_toTopOf="@+id/tvKonfirmMpin" />
+
+                    <TextView
+                        android:id="@+id/tvKonfirmTd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text=":"
+                        android:textSize="14dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvKonfirmBintang"
+                        app:layout_constraintStart_toEndOf="@+id/tvKonfirmBintang"
+                        app:layout_constraintTop_toTopOf="@+id/tvKonfirmBintang" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilKonfirmMpin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/tvKonfirmMpin"
+                        app:layout_constraintTop_toBottomOf="@+id/tvKonfirmMpin"
+                        app:passwordToggleDrawable="@drawable/ic_togle"
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleTint="#6C63FF">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Konfirmasi MPIN" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/tvErrorKonfirmMpin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="MPIN tidak sama"
+                        android:textColor="#E71414"
+                        android:textSize="10dp"
+                        app:layout_constraintStart_toStartOf="@+id/tilKonfirmMpin"
+                        app:layout_constraintTop_toBottomOf="@+id/tilKonfirmMpin" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tvJudulMpin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="142dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="143dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Buat MPIN  "
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivBackMpin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_back" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSimpan"
+                android:layout_width="342dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="29dp"
+                android:layout_marginBottom="45dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Simpan"
+                android:textColor="#F0F3FB"
+                android:textSize="14dp"
+                app:backgroundTint="#6C63FF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
